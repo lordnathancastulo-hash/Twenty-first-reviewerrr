@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>21st Century Literature Reviewer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="site-header">
+      <h1>📚 21st Century Literature Reviewer</h1>
+      <p>from the Philippines and the World · Lessons 4, 5 &amp; 6</p>
+    </header>
+
+    <!-- HOME -->
+    <section id="screen-home" class="card">
+      <div class="stat-row">
+        <div class="stat"><b id="total-count">100</b><span>Questions</span></div>
+        <div class="stat"><b>4</b><span>Lessons</span></div>
+        <div class="stat"><b>A–D</b><span>Choices</span></div>
+      </div>
+
+      <h2>Choose what to review</h2>
+      <div id="topic-chips" class="chips"></div>
+
+      <label class="opt-line">
+        <input type="checkbox" id="opt-shuffle" checked />
+        Shuffle question order
+      </label>
+      <p id="start-info"></p>
+
+      <div class="btn-row">
+        <button id="btn-start" class="btn">Start Reviewer</button>
+        <button id="btn-notes" class="btn secondary">📝 Study Notes</button>
+      </div>
+
+      <div class="tips">
+        💡 After you click an answer — right or wrong — the correct answer and its explanation are shown.
+        Shortcuts: press <b>A–D</b> (or <b>1–4</b>) to answer, <b>Enter</b> for next.
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="screen-quiz" class="card hidden">
+      <div class="quiz-top">
+        <span id="q-count">Question 1</span>
+        <span id="q-score">Score: 0</span>
+      </div>
+      <div class="progress"><div id="progress-bar"></div></div>
+
+      <span id="q-topic" class="topic-badge"></span>
+      <p id="q-text" class="question"></p>
+      <div id="options" class="options"></div>
+      <div id="feedback" class="feedback hidden"></div>
+      <button id="btn-next" class="btn hidden">Next Question →</button>
+
+      <div class="quiz-actions">
+        <button id="btn-quit" class="btn ghost">Quit</button>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section id="screen-result" class="card hidden">
+      <div class="result-head">
+        <h2>Results</h2>
+        <div class="big" id="r-score">0 / 0</div>
+        <div class="pct" id="r-pct">0%</div>
+        <div class="msg" id="r-msg"></div>
+      </div>
+      <div id="r-missed"></div>
+      <div class="btn-row">
+        <button id="btn-retry-missed" class="btn">Retry Missed Only</button>
+        <button id="btn-restart" class="btn secondary">Try Again</button>
+        <button id="btn-home" class="btn ghost">Home</button>
+      </div>
+    </section>
+
+    <!-- NOTES -->
+    <section id="screen-notes" class="card hidden">
+      <h2>📝 Study Notes</h2>
+      <p style="color: var(--muted); margin-top: 0;">
+        Highlighted terms are the ones covered in the question bank.
+      </p>
+      <div id="notes-list"></div>
+      <div class="btn-row">
+        <button id="btn-notes-quiz" class="btn">Take the Reviewer</button>
+        <button id="btn-notes-back" class="btn ghost">Back</button>
+      </div>
+    </section>
+
+    <footer>Made for review purposes · Good luck on your exam! ✨</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
